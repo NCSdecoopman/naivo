@@ -1,0 +1,1 @@
+The name naivo, associated logos, and visual identity are protected.
