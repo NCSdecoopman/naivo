@@ -21,3 +21,6 @@ only, subject to the following conditions:
    notice.
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND.
+
+© 2025 naivo — All rights reserved.
+Source code licensed under the PolyForm Noncommercial License.
