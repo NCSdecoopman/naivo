@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="fr" data-astro-cid-47ezsiys> <head><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark"><link rel="manifest" href="/manifest.webmanifest"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/svg+xml" href="/logo/flocon-white.svg"><link rel="apple-touch-icon" href="/icons/icon-192.png"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="generator" content="Astro v5.16.4"><title>Naivo - Assistant de ski</title><meta name="description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain) avec recherche par lieu et carte interactive."><meta name="theme-color" content="#0d0e12"><link rel="canonical" href="https://naivo.fr/mobile/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-JM5E6H816Y"></script><script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-JM5E6H816Y');
+		</script><script>
+			// Hide loading overlay after 2 seconds (estimate for map initialization)
+			// In a real scenario, we could use an event from the React component
+			setTimeout(() => {
+				const overlay = document.getElementById('loading-overlay');
+				if (overlay) {
+					overlay.style.opacity = '0';
+					setTimeout(() => overlay.remove(), 500);
+				}
+			}, 2000);
+		</script><link rel="stylesheet" href="/assets/faq.CfSuX6Q2.css">
+<style>html{height:100%}body{display:flex;flex-direction:column;min-height:100svh;height:100svh;padding:0;overflow:hidden;background:#0d0e12}main[data-astro-cid-47ezsiys]{width:100%;flex:1;display:flex;min-height:0}.container[data-astro-cid-47ezsiys]{width:100vw;max-width:none;padding:0;padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+<link rel="stylesheet" href="/assets/index.BQlc4wYO.css"></head> <body class="has-query has-map" data-astro-cid-47ezsiys> <div id="loading-overlay" class="loading-overlay" data-astro-cid-47ezsiys> <div class="loading-content" data-astro-cid-47ezsiys> <img src="/logo/flocon-white.svg" alt="" class="loading-spinner" data-astro-cid-47ezsiys> <p data-astro-cid-47ezsiys>Chargement de la carte...</p> </div> </div> <main data-astro-cid-47ezsiys> <div class="container flex flex-col items-center gap-0 sm:gap-3 flex-1 h-full w-[100vw]" data-astro-cid-47ezsiys> <div class="w-full flex-1 min-h-0 flex flex-col" data-astro-cid-47ezsiys> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z2vaFQ6" component-url="/assets/MassifSearch.B1psC04t.js" component-export="default" renderer-url="/assets/client.DRHoadYh.js" props="{&quot;forceMobile&quot;:[0,true],&quot;data-astro-cid-47ezsiys&quot;:[0,true]}" ssr client="only" opts="{&quot;name&quot;:&quot;MassifSearch&quot;,&quot;value&quot;:&quot;react&quot;}"></astro-island> </div> </div> </main> <div style="display: none;" aria-hidden="true" data-astro-cid-47ezsiys> <button id="install-pwa-android" type="button" data-astro-cid-47ezsiys>Install Android</button> <button id="install-pwa-ios" type="button" data-astro-cid-47ezsiys>Install iOS</button> </div> <script>
+		let deferredPrompt = null;
+
+		function isIOS() {
+			const ua = window.navigator.userAgent.toLowerCase();
+			return /iphone|ipad|ipod/.test(ua);
+		}
+		function isAndroid() {
+			const ua = window.navigator.userAgent.toLowerCase();
+			return /android/.test(ua);
+		}
+		function showAndroidInstallHelp() {
+			alert("Installation Android : ouvrez le menu du navigateur puis 'Ajouter a l'écran d'accueil'.");
+		}
+
+		window.addEventListener("beforeinstallprompt", (e) => {
+			const btnAndroid = document.getElementById("install-pwa-android");
+			if (!btnAndroid) return;
+			e.preventDefault();
+			deferredPrompt = e;
+		});
+
+		window.addEventListener("load", () => {
+			const btnAndroid = document.getElementById("install-pwa-android");
+			const btnIOS = document.getElementById("install-pwa-ios");
+
+			if (btnAndroid) {
+				btnAndroid.addEventListener("click", async () => {
+					if (deferredPrompt && !isIOS()) {
+						deferredPrompt.prompt();
+						await deferredPrompt.userChoice;
+						deferredPrompt = null;
+						return;
+					}
+					console.log("Prompt PWA non disponible sur ce navigateur/appareil.");
+					if (isAndroid() && !isIOS()) {
+						showAndroidInstallHelp();
+					}
+				});
+			}
+
+			if (btnIOS) {
+				btnIOS.addEventListener("click", () => {
+					alert(
+						"iOS : Ouvrez Naivo dans Safari, touchez Partager, puis Sur l'écran d'accueil."
+					);
+				});
+			}
+		});
+	</script>  </body> </html>
