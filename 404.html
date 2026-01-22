@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark"><link rel="manifest" href="/manifest.webmanifest"><!-- Favicon prioritaire (Google SERP / legacy) --><link rel="icon" href="/favicon.ico" sizes="any"><link rel="shortcut icon" href="/favicon.ico"><!-- Favicons modernes --><link rel="icon" type="image/svg+xml" href="/logo/flocon-white.svg"><link rel="icon" type="image/png" sizes="48x48" href="/icons/icon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"><link rel="apple-touch-icon" href="/icons/icon-192.png"><!-- Preload logo --><link rel="preload" as="image" href="/logo/flocon-white.svg" type="image/svg+xml" fetchpriority="high"><link rel="preload" as="image" href="/logo/naivo-light.svg" type="image/svg+xml" fetchpriority="high"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="generator" content="Astro v5.16.11"><title>Page non trouvée | Naivo</title><meta name="description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain Skitour/Camptocamp) avec recherche par lieu et carte interactive."><meta name="keywords" content="ski de randonnee, neige, nivologie, météo, montagne, BERA, webcam, carte, skitour, camptocamp, c2c"><meta name="application-name" content="naivo"><meta name="theme-color" content="#0d0e12"><link rel="canonical" href="https://naivo.fr/404/"><meta property="og:type" content="website"><meta property="og:site_name" content="naivo"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Page non trouvée | Naivo"><meta property="og:description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain Skitour/Camptocamp) avec recherche par lieu et carte interactive."><meta property="og:url" content="https://naivo.fr/404/"><meta property="og:image" content="https://naivo.fr/icons/icon-512.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Page non trouvée | Naivo"><meta name="twitter:description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain Skitour/Camptocamp) avec recherche par lieu et carte interactive."><meta name="twitter:image" content="https://naivo.fr/icons/icon-512.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><!-- Google tag (gtag.js) - Consent Mode v2 setup --><script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			window.gtag = gtag;
+
+			// 1. Default consent: denied
+			gtag('consent', 'default', {
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_ads_personalization: 'denied',
+				analytics_storage: 'denied',
+				wait_for_update: 500,
+			});
+
+			// 2. Restore consent immediately if saved
+			const savedConsent = localStorage.getItem('naivo_cookie_consent');
+			const hasGranted = savedConsent === 'granted';
+			
+			if (hasGranted) {
+				gtag('consent', 'update', {
+					ad_storage: 'granted',
+					ad_user_data: 'granted',
+					ad_ads_personalization: 'granted',
+					analytics_storage: 'granted',
+				});
+			}
+
+			// 3. Initial GA Setup
+			gtag('js', new Date());
+			gtag('config', 'G-JM5E6H816Y', {
+				anonymize_ip: true,
+				// Set advertising signals based on restored consent
+				allow_google_signals: hasGranted,
+				allow_ad_personalization_signals: hasGranted
+			});
+		</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-JM5E6H816Y"></script><script type="module" src="/assets/AppLayout.astro_astro_type_script_index_0_lang.B7Gr2L8T.js"></script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "naivo",
+  "url": "https://naivo.fr",
+  "applicationCategory": "WeatherApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "fr-FR",
+  "description": "Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain Skitour/Camptocamp) avec recherche par lieu et carte interactive.",
+  "featureList": [
+    "Recherche geolocalisee de sortie en ski de randonnée",
+    "Carte interactive avec BERA, stations, webcams, prévisions et avis terrain"
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "naivo",
+    "url": "https://naivo.fr"
+  }
+}</script><script>
+			// Hide loading overlay after 2 seconds (estimate for map initialization)
+			setTimeout(() => {
+				const overlay = document.getElementById('loading-overlay');
+				if (overlay) {
+					overlay.style.opacity = '0';
+					setTimeout(() => overlay.remove(), 500);
+				}
+			}, 2000);
+		</script><script>
+				// Register Service Worker for PWA updates (only in production)
+				if ('serviceWorker' in navigator) {
+					window.addEventListener('load', () => {
+						navigator.serviceWorker.register('/sw.js').then(reg => {
+							reg.onupdatefound = () => {
+								const installingWorker = reg.installing;
+								if (installingWorker) {
+									installingWorker.onstatechange = () => {
+										if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+											// New version available! We could show a toast here.
+											console.log('Nouvelle version disponible. Rechargez la page.');
+										}
+									};
+								}
+							};
+						}).catch(err => console.error('SW registration failed:', err));
+					});
+				}
+			</script><link rel="stylesheet" href="/assets/index.Cwamp5zG.css">
+<link rel="stylesheet" href="/assets/index.BbGTm_Z6.css"></head> <body class="has-query has-map">  <main> <div class="container flex flex-col items-center gap-0 sm:gap-3 flex-1 h-full"> <a href="/" aria-label="Accueil Naivo" class="logo-wrapper"> <img src="/logo/naivo-light.svg" alt="Naivo" class="logo-img" id="site-logo"> </a> <div class="w-[100vw] sm:w-full flex-1 min-h-0 flex flex-col">  <div class="flex flex-col items-center justify-center h-full text-center p-4 space-y-6"> <div class="space-y-2"> <h1 class="text-6xl font-bold text-white">404</h1> <h2 class="text-2xl font-semibold text-[var(--primary)]">Hors-piste détecté</h2> </div> <p class="text-lg text-gray-300 max-w-md">
+Il semblerait que vous vous soyez aventuré dans une zone non cartographiée.
+</p> <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-[var(--primary)] text-white rounded-[var(--radius)] font-medium hover:brightness-110 transition-all shadow-[var(--shadow)]"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+Retourner en zone sécurisée
+</a> </div>  </div> </div> </main> <footer class="footer"> <div class="container footer-inner"> <!-- A propos --> <a href="/sources" class="social-icon" aria-label="Informations"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <circle class="fill" cx="15" cy="11" r="1.2"></circle> <rect class="fill" x="14.3" y="13.5" width="1.4" height="7" rx="0.7"></rect> </svg> </a> <!-- Instagram --> <a href="https://www.instagram.com/naivo.fr/" target="_blank" rel="noreferrer" class="social-icon" aria-label="Instagram Naivo"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <circle class="stroke" cx="15" cy="15" r="5"></circle> <circle class="fill" cx="20" cy="8" r="1.6"></circle> </svg> </a> <!-- Facebook --> <a href="https://www.facebook.com/naivo.fr/" target="_blank" rel="noreferrer" class="social-icon" aria-label="Facebook naivo"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <path class="fill" d="M16 22v-6h2.2l.3-2H16v-1.5c0-.7.3-1.1 1.1-1.1h1.4V8.8c-.5 0-1.4-.1-2.5-.1-2.4 0-3.9 1.4-3.9 3.9V14h-2v2h2v6h3.9z"></path> </svg> </a> </div> </footer> <div style="display: none;" aria-hidden="true"> <button id="install-pwa-android" type="button">Install Android</button> <button id="install-pwa-ios" type="button">Install iOS</button> </div> <div class="modal" id="ios-modal" aria-hidden="true"> <div class="modal-backdrop" id="close-ios"></div> <div class="modal-card"> <div class="modal-header"> <h3>Ajouter Naivo à l’écran d’accueil sur iOS</h3> <button class="close-btn" id="close-ios-btn" aria-label="Fermer">
+&times;
+</button> </div> <div class="modal-body"> <p>
+Pour installer Naivo comme une application sur votre écran d’accueil&nbsp;:
+</p> <ol> <li>Ouvrez <strong>Naivo</strong> dans <strong>Safari</strong>.</li> <li>Touchez le bouton <strong>Partager</strong> (carré avec une flèche vers le haut).</li> <li>Faites défiler la liste des actions.</li> <li>Sélectionnez <strong>«&nbsp;Sur l’écran d’accueil&nbsp;»</strong>.</li> <li>Validez le nom de l’app puis touchez <strong>Ajouter</strong>.</li> </ol> <h4>Remarque</h4> <p>
+Cette opération doit être faite directement depuis Safari.  
+                    Les autres navigateurs iOS (Chrome, Firefox) ne permettent pas toujours
+                    l’installation avec toutes les fonctionnalités.
+</p> </div> </div> </div> <!-- PWA Scripts --> <script>
+            let deferredPrompt = null;
+    
+            function isIOS() {
+                const ua = window.navigator.userAgent.toLowerCase();
+                return /iphone|ipad|ipod/.test(ua);
+            }
+            function isAndroid() {
+                const ua = window.navigator.userAgent.toLowerCase();
+                return /android/.test(ua);
+            }
+            function showAndroidInstallHelp() {
+                alert("Installation Android : ouvrez le menu du navigateur puis 'Ajouter a l'écran d'accueil'.");
+            }
+    
+            window.addEventListener("beforeinstallprompt", (e) => {
+                const btnAndroid = document.getElementById("install-pwa-android");
+                if (!btnAndroid) return;
+                e.preventDefault();
+                deferredPrompt = e;
+            });
+    
+            window.addEventListener("load", () => {
+                const btnAndroid = document.getElementById("install-pwa-android");
+                const btnIOS = document.getElementById("install-pwa-ios");
+    
+                if (btnAndroid) {
+                    btnAndroid.addEventListener("click", async () => {
+                        if (deferredPrompt && !isIOS()) {
+                            deferredPrompt.prompt();
+                            await deferredPrompt.userChoice;
+                            deferredPrompt = null;
+                            return;
+                        }
+                        console.log("Prompt PWA non disponible sur ce navigateur/appareil.");
+                        if (isAndroid() && !isIOS()) {
+                            showAndroidInstallHelp();
+                        }
+                    });
+                }
+    
+                if (btnIOS) {
+                    btnIOS.addEventListener("click", () => {
+                        alert("iOS : Ouvrez Naivo dans Safari, touchez Partager, puis Sur l'écran d'accueil.");
+                    });
+                }
+            });
+        </script> <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const iosModal = document.getElementById('ios-modal');
+                const openIOS = document.getElementById('install-pwa-ios');
+                const closeIOS = document.getElementById('close-ios');
+                const closeIOSBtn = document.getElementById('close-ios-btn');
+                const logo = document.getElementById('site-logo');
+                const searchInput = document.getElementById('massif-search-input');
+    
+                const toggleModal = (modalEl, show) => {
+                    if (!modalEl) return;
+                    modalEl.setAttribute('aria-hidden', show ? 'false' : 'true');
+                    modalEl.classList.toggle('is-open', show);
+                };
+    
+                openIOS?.addEventListener('click', () => toggleModal(iosModal, true));
+                closeIOS?.addEventListener('click', () => toggleModal(iosModal, false));
+                closeIOSBtn?.addEventListener('click', () => toggleModal(iosModal, false));
+    
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        toggleModal(iosModal, false);
+                    }
+                });
+    
+                const updateLogoSize = () => {
+                    if (!logo || !searchInput) return;
+                    logo.classList.remove('logo-small');
+                };
+                searchInput?.addEventListener('input', updateLogoSize);
+                updateLogoSize();
+            });
+        </script>  </body> </html>

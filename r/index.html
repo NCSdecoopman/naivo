@@ -1,0 +1,348 @@
+<!DOCTYPE html><html lang="fr"> <head><meta charset="utf-8"><meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark"><link rel="manifest" href="/manifest.webmanifest"><!-- Favicon prioritaire (Google SERP / legacy) --><link rel="icon" href="/favicon.ico" sizes="any"><link rel="shortcut icon" href="/favicon.ico"><!-- Favicons modernes --><link rel="icon" type="image/svg+xml" href="/logo/flocon-white.svg"><link rel="icon" type="image/png" sizes="48x48" href="/icons/icon-48.png"><link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png"><link rel="apple-touch-icon" href="/icons/icon-192.png"><!-- Preload logo --><link rel="preload" as="image" href="/logo/flocon-white.svg" type="image/svg+xml" fetchpriority="high"><link rel="preload" as="image" href="/logo/naivo-light.svg" type="image/svg+xml" fetchpriority="high"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="generator" content="Astro v5.16.11"><title>Naivo - Assistant de ski</title><meta name="description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain)."><meta name="keywords" content="ski de randonnee, neige, nivologie, météo, montagne, BERA, webcam, carte, skitour, camptocamp, c2c"><meta name="application-name" content="naivo"><meta name="theme-color" content="#0d0e12"><link rel="canonical" href="https://naivo.fr/r/"><meta property="og:type" content="website"><meta property="og:site_name" content="naivo"><meta property="og:locale" content="fr_FR"><meta property="og:title" content="Naivo - Assistant de ski"><meta property="og:description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain)."><meta property="og:url" content="https://naivo.fr/r/"><meta property="og:image" content="https://naivo.fr/icons/icon-512.png"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Naivo - Assistant de ski"><meta name="twitter:description" content="Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain)."><meta name="twitter:image" content="https://naivo.fr/icons/icon-512.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"><!-- Google tag (gtag.js) - Consent Mode v2 setup --><script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			window.gtag = gtag;
+
+			// 1. Default consent: denied
+			gtag('consent', 'default', {
+				ad_storage: 'denied',
+				ad_user_data: 'denied',
+				ad_ads_personalization: 'denied',
+				analytics_storage: 'denied',
+				wait_for_update: 500,
+			});
+
+			// 2. Restore consent immediately if saved
+			const savedConsent = localStorage.getItem('naivo_cookie_consent');
+			const hasGranted = savedConsent === 'granted';
+			
+			if (hasGranted) {
+				gtag('consent', 'update', {
+					ad_storage: 'granted',
+					ad_user_data: 'granted',
+					ad_ads_personalization: 'granted',
+					analytics_storage: 'granted',
+				});
+			}
+
+			// 3. Initial GA Setup
+			gtag('js', new Date());
+			gtag('config', 'G-JM5E6H816Y', {
+				anonymize_ip: true,
+				// Set advertising signals based on restored consent
+				allow_google_signals: hasGranted,
+				allow_ad_personalization_signals: hasGranted
+			});
+		</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-JM5E6H816Y"></script><script type="module" src="/assets/AppLayout.astro_astro_type_script_index_0_lang.B7Gr2L8T.js"></script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "naivo",
+  "url": "https://naivo.fr",
+  "applicationCategory": "WeatherApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "fr-FR",
+  "description": "Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain).",
+  "featureList": [
+    "Recherche geolocalisee de sortie en ski de randonnée",
+    "Carte interactive avec BERA, stations, webcams, prévisions et avis terrain"
+  ],
+  "provider": {
+    "@type": "Organization",
+    "name": "naivo",
+    "url": "https://naivo.fr"
+  }
+}</script><script>
+			// Hide loading overlay after 2 seconds (estimate for map initialization)
+			setTimeout(() => {
+				const overlay = document.getElementById('loading-overlay');
+				if (overlay) {
+					overlay.style.opacity = '0';
+					setTimeout(() => overlay.remove(), 500);
+				}
+			}, 2000);
+		</script><script>
+				// Register Service Worker for PWA updates (only in production)
+				if ('serviceWorker' in navigator) {
+					window.addEventListener('load', () => {
+						navigator.serviceWorker.register('/sw.js').then(reg => {
+							reg.onupdatefound = () => {
+								const installingWorker = reg.installing;
+								if (installingWorker) {
+									installingWorker.onstatechange = () => {
+										if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+											// New version available! We could show a toast here.
+											console.log('Nouvelle version disponible. Rechargez la page.');
+										}
+									};
+								}
+							};
+						}).catch(err => console.error('SW registration failed:', err));
+					});
+				}
+			</script><link rel="stylesheet" href="/assets/index.Cwamp5zG.css">
+<link rel="stylesheet" href="/assets/index.BbGTm_Z6.css"></head> <body class="has-query has-map"> <div id="loading-overlay" class="loading-overlay"> <div class="loading-content"> <img src="/logo/flocon-white.svg" alt="" class="loading-spinner"> <p>Chargement de la carte...</p> </div> </div> <main> <div class="container flex flex-col items-center gap-0 sm:gap-3 flex-1 h-full"> <a href="/" aria-label="Accueil Naivo" class="logo-wrapper"> <img src="/logo/naivo-light.svg" alt="Naivo" class="logo-img" id="site-logo"> </a> <div class="w-[100vw] sm:w-full flex-1 min-h-0 flex flex-col">  <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZASgt8" prefix="r1" component-url="/assets/MassifSearch.CnYWZJSa.js" component-export="default" renderer-url="/assets/client.CxL3PKrd.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;MassifSearch&quot;,&quot;value&quot;:true}" await-children><link rel="preload" as="image" href="/icons/tuto.svg"/><link rel="preload" as="image" href="/app/googleplay.svg"/><link rel="preload" as="image" href="/app/appstore.svg"/><div class="w-full flex flex-col h-full min-h-0 relative max-w-4xl mx-auto px-1 sm:px-6 "><div class="orientation-lock" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Mode paysage non supporte"><div class="orientation-lock__card"><div class="orientation-lock__title">Mode paysage non supporté</div><div class="orientation-lock__text">Tournez votre téléphone en mode portrait pour continuer.</div></div></div><div class="pt-8 sm:pt-12 pb-4 sm:pb-6 flex-1 flex flex-col gap-4 sm:gap-6"><div class="relative w-full z-[2000]"><div class="w-full flex flex-col md:flex-row md:items-center gap-3 sm:gap-4 p-3 sm:p-5 rounded-[var(--radius)] bg-[radial-gradient(circle_at_20%_0%,rgba(56,189,248,0.12),transparent_52%),radial-gradient(circle_at_80%_120%,rgba(59,130,246,0.16),transparent_60%),var(--card-bg)] border border-[var(--border)]/80 shadow-[0_16px_40px_rgba(0,0,0,0.55)] ring-1 ring-[rgba(59,130,246,0.22)] backdrop-blur-sm"><div class="w-full "><div class="relative w-full"><div class="relative"><div class="bg-[rgba(31,41,55,0.95)] border border-[var(--border)] rounded-[10px] shadow-[0_10px_30px_rgba(0,0,0,0.4)] backdrop-blur-sm"><div class="relative flex items-center"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 text-[var(--primary)] drop-shadow-[0_4px_12px_rgba(59,130,246,0.35)]"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="massif-search-input" placeholder="Entrez un lieu" autoComplete="off" autoCorrect="off" autoCapitalize="none" spellCheck="false" class="w-full bg-transparent border-0 rounded-[10px] h-10 pl-9 pr-12 py-0 text-[12px] text-[var(--text-main)] placeholder-[var(--text-main)] placeholder:opacity-80 focus:outline-none focus:ring-2 focus:ring-[var(--primary)]" value=""/></div></div></div></div></div></div></div><div class="flex flex-col flex-1 w-full items-center justify-evenly text-center gap-6 sm:gap-8"><div class="space-y-1"><h2 class="text-xl sm:text-2xl font-semibold text-white">Quelle zone explorer aujourd&#x27;hui ?</h2><p class="text-sm text-white/75">Cherche ton point de départ.</p></div><div class="w-full flex items-center justify-center"><div class="flex items-center gap-4"><a href="/tutoriel" class="inline-flex p-0 bg-transparent border-0 shadow-none hover:opacity-90 transition-opacity" aria-label="Voir le tutoriel Naivo"><img src="/icons/tuto.svg" alt="Voir le tutoriel Naivo" class="h-10 w-auto"/></a><button type="button" class="p-0 bg-transparent border-0 shadow-none hover:opacity-90 transition-opacity" aria-label="Installer Naivo sur Google Play"><img src="/app/googleplay.svg" alt="Installer Naivo sur Google Play" class="h-10 w-auto"/></button><button type="button" class="p-0 bg-transparent border-0 shadow-none hover:opacity-90 transition-opacity" aria-label="Installer Naivo sur l&#x27;App Store"><img src="/app/appstore.svg" alt="Installer Naivo sur l&#x27;App Store" class="h-10 w-auto"/></button></div></div></div></div></div><!--astro:end--></astro-island>  </div> </div> </main> <footer class="footer"> <div class="container footer-inner"> <!-- A propos --> <a href="/sources" class="social-icon" aria-label="Informations"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <circle class="fill" cx="15" cy="11" r="1.2"></circle> <rect class="fill" x="14.3" y="13.5" width="1.4" height="7" rx="0.7"></rect> </svg> </a> <!-- Instagram --> <a href="https://www.instagram.com/naivo.fr/" target="_blank" rel="noreferrer" class="social-icon" aria-label="Instagram Naivo"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <circle class="stroke" cx="15" cy="15" r="5"></circle> <circle class="fill" cx="20" cy="8" r="1.6"></circle> </svg> </a> <!-- Facebook --> <a href="https://www.facebook.com/naivo.fr/" target="_blank" rel="noreferrer" class="social-icon" aria-label="Facebook naivo"> <svg viewBox="0 0 30 30" aria-hidden="true"> <rect x="3" y="3" width="24" height="24" rx="6" ry="6" class="stroke"></rect> <path class="fill" d="M16 22v-6h2.2l.3-2H16v-1.5c0-.7.3-1.1 1.1-1.1h1.4V8.8c-.5 0-1.4-.1-2.5-.1-2.4 0-3.9 1.4-3.9 3.9V14h-2v2h2v6h3.9z"></path> </svg> </a> </div> </footer> <div style="display: none;" aria-hidden="true"> <button id="install-pwa-android" type="button">Install Android</button> <button id="install-pwa-ios" type="button">Install iOS</button> </div> <div class="modal" id="ios-modal" aria-hidden="true"> <div class="modal-backdrop" id="close-ios"></div> <div class="modal-card"> <div class="modal-header"> <h3>Ajouter Naivo à l’écran d’accueil sur iOS</h3> <button class="close-btn" id="close-ios-btn" aria-label="Fermer">
+&times;
+</button> </div> <div class="modal-body"> <p>
+Pour installer Naivo comme une application sur votre écran d’accueil&nbsp;:
+</p> <ol> <li>Ouvrez <strong>Naivo</strong> dans <strong>Safari</strong>.</li> <li>Touchez le bouton <strong>Partager</strong> (carré avec une flèche vers le haut).</li> <li>Faites défiler la liste des actions.</li> <li>Sélectionnez <strong>«&nbsp;Sur l’écran d’accueil&nbsp;»</strong>.</li> <li>Validez le nom de l’app puis touchez <strong>Ajouter</strong>.</li> </ol> <h4>Remarque</h4> <p>
+Cette opération doit être faite directement depuis Safari.  
+                    Les autres navigateurs iOS (Chrome, Firefox) ne permettent pas toujours
+                    l’installation avec toutes les fonctionnalités.
+</p> </div> </div> </div> <!-- PWA Scripts --> <script>
+            let deferredPrompt = null;
+    
+            function isIOS() {
+                const ua = window.navigator.userAgent.toLowerCase();
+                return /iphone|ipad|ipod/.test(ua);
+            }
+            function isAndroid() {
+                const ua = window.navigator.userAgent.toLowerCase();
+                return /android/.test(ua);
+            }
+            function showAndroidInstallHelp() {
+                alert("Installation Android : ouvrez le menu du navigateur puis 'Ajouter a l'écran d'accueil'.");
+            }
+    
+            window.addEventListener("beforeinstallprompt", (e) => {
+                const btnAndroid = document.getElementById("install-pwa-android");
+                if (!btnAndroid) return;
+                e.preventDefault();
+                deferredPrompt = e;
+            });
+    
+            window.addEventListener("load", () => {
+                const btnAndroid = document.getElementById("install-pwa-android");
+                const btnIOS = document.getElementById("install-pwa-ios");
+    
+                if (btnAndroid) {
+                    btnAndroid.addEventListener("click", async () => {
+                        if (deferredPrompt && !isIOS()) {
+                            deferredPrompt.prompt();
+                            await deferredPrompt.userChoice;
+                            deferredPrompt = null;
+                            return;
+                        }
+                        console.log("Prompt PWA non disponible sur ce navigateur/appareil.");
+                        if (isAndroid() && !isIOS()) {
+                            showAndroidInstallHelp();
+                        }
+                    });
+                }
+    
+                if (btnIOS) {
+                    btnIOS.addEventListener("click", () => {
+                        alert("iOS : Ouvrez Naivo dans Safari, touchez Partager, puis Sur l'écran d'accueil.");
+                    });
+                }
+            });
+        </script> <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const iosModal = document.getElementById('ios-modal');
+                const openIOS = document.getElementById('install-pwa-ios');
+                const closeIOS = document.getElementById('close-ios');
+                const closeIOSBtn = document.getElementById('close-ios-btn');
+                const logo = document.getElementById('site-logo');
+                const searchInput = document.getElementById('massif-search-input');
+    
+                const toggleModal = (modalEl, show) => {
+                    if (!modalEl) return;
+                    modalEl.setAttribute('aria-hidden', show ? 'false' : 'true');
+                    modalEl.classList.toggle('is-open', show);
+                };
+    
+                openIOS?.addEventListener('click', () => toggleModal(iosModal, true));
+                closeIOS?.addEventListener('click', () => toggleModal(iosModal, false));
+                closeIOSBtn?.addEventListener('click', () => toggleModal(iosModal, false));
+    
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') {
+                        toggleModal(iosModal, false);
+                    }
+                });
+    
+                const updateLogoSize = () => {
+                    if (!logo || !searchInput) return;
+                    logo.classList.remove('logo-small');
+                };
+                searchInput?.addEventListener('input', updateLogoSize);
+                updateLogoSize();
+            });
+        </script>  </body> </html> <script>
+  // --- Copie des helpers de [id].astro ---
+  function normalizeType(t) {
+    var v = (t || "").trim().toLowerCase();
+    if (["webcam", "webcams", "cam", "cams"].includes(v)) return "webcams";
+    if (["station", "stations"].includes(v)) return "stations";
+    if (["avis", "condition", "conditions"].includes(v)) return "avis";
+    if (v === "bera") return "bera";
+    return "unknown";
+  }
+
+  function nameFromSlug(slug) {
+    if (!slug) return "";
+    var parts = slug.split("-");
+    if (parts.length > 1) {
+      return parts
+        .slice(1)
+        .map(function (p) {
+          return p ? p.charAt(0).toUpperCase() + p.slice(1) : "";
+        })
+        .join(" ")
+        .trim();
+    }
+    return slug.charAt(0).toUpperCase() + slug.slice(1);
+  }
+
+  function parseHashRoute() {
+    // attend "#/type/id-slug"
+    var h = (window.location.hash || "").trim();
+    if (!h || h === "#") return null;
+    if (h.startsWith("#")) h = h.slice(1);
+    if (!h.startsWith("/")) h = "/" + h;
+
+    var parts = h.split("/").filter(Boolean);
+    if (parts.length < 2) return null;
+
+    var rawType = decodeURIComponent(parts[0] || "");
+    var rawSeg = decodeURIComponent(parts[1] || "");
+    var rawId = ((rawSeg.split("-")[0] || "")).trim();
+
+    var type = normalizeType(rawType);
+    if (type === "unknown" || !rawId) return null;
+
+    return { type: type, seg: rawSeg, id: rawId };
+  }
+
+  function setOrCreateMeta(selector, attr, value) {
+    var el = document.querySelector(selector);
+    if (!el) {
+      // create if missing (useful if AppLayout doesn't include OG tags everywhere)
+      if (selector.startsWith('meta[')) {
+        el = document.createElement("meta");
+        // selector example: meta[property="og:title"]
+        var m = selector.match(/^meta\[(.+?)="(.+?)"\]$/);
+        if (m) el.setAttribute(m[1], m[2]);
+        document.head.appendChild(el);
+      } else if (selector.startsWith('link[')) {
+        el = document.createElement("link");
+        var l = selector.match(/^link\[(.+?)="(.+?)"\]$/);
+        if (l) el.setAttribute(l[1], l[2]);
+        document.head.appendChild(el);
+      } else {
+        return;
+      }
+    }
+    el.setAttribute(attr, value);
+  }
+
+  function applySeo(title, description, ogImage, canonicalUrl) {
+    document.title = title;
+
+    setOrCreateMeta('meta[name="description"]', "content", description);
+
+    setOrCreateMeta('meta[property="og:title"]', "content", title);
+    setOrCreateMeta('meta[property="og:description"]', "content", description);
+    setOrCreateMeta('meta[property="og:image"]', "content", ogImage);
+    setOrCreateMeta('meta[property="og:url"]', "content", canonicalUrl);
+
+    setOrCreateMeta('meta[name="twitter:title"]', "content", title);
+    setOrCreateMeta('meta[name="twitter:description"]', "content", description);
+    setOrCreateMeta('meta[name="twitter:image"]', "content", ogImage);
+
+    setOrCreateMeta('link[rel="canonical"]', "href", canonicalUrl);
+  }
+
+  function normalizeCode(c) {
+    return String(c || "").trim().replace(/^0+/, "");
+  }
+
+  (async function () {
+    var siteUrl = "https://naivo.fr";
+
+    var title = "Naivo - Assistant de ski";
+    var description =
+      "Naivo centralise les données météo et nivologiques (BERA, observations de stations, webcams, prévisions et retours terrain).";
+    var ogImage = siteUrl + "/icons/icon-512.png";
+
+    var r = parseHashRoute();
+    if (!r) {
+      applySeo(title, description, ogImage, siteUrl + "/r");
+      return;
+    }
+
+    var fetchOptions = { headers: { "User-Agent": "Naivo-Astro-Bridge/1.0" } };
+
+    try {
+      if (r.type === "stations" && r.id && r.id !== "ll") {
+        const res = await fetch(
+          "https://raw.githubusercontent.com/NCSdecoopman/naivo-data/master/data/metadonnees/stations/stations.geojson",
+          fetchOptions
+        );
+        if (res.ok) {
+          const data = await res.json();
+          const feat = data.features.find((f) => {
+            var p = (f && f.properties) || {};
+            var cand = String(p.geo_id_insee || p.id || p.code || p.insee || p.station_id || "");
+            return normalizeCode(cand) === normalizeCode(r.id);
+          });
+          if (feat) {
+            const p = feat.properties || {};
+            const name = p.name || p.nom || p.libelle;
+            title = "Naivo - Station " + name;
+            description =
+              "Observations météo et nivologiques pour la station de " +
+              name +
+              ". Retrouvez l'altitude, les relevés récents et les graphiques.";
+          }
+        }
+      } else if (r.type === "webcams" && r.id && r.id !== "ll") {
+        const res = await fetch(
+          "https://raw.githubusercontent.com/NCSdecoopman/naivo-data/master/data/metadonnees/webcams/webcams.geojson",
+          fetchOptions
+        );
+        if (res.ok) {
+          const data = await res.json();
+          const feat = data.features.find((f) => normalizeCode((f.properties || {}).id) === normalizeCode(r.id));
+          if (feat) {
+            const p = feat.properties || {};
+            const name = p.name || nameFromSlug(r.seg) || ("Webcam " + r.id);
+            title = "Naivo - Webcam " + name;
+            description =
+              "Visualisez les conditions en direct avec la webcam de " +
+              name +
+              ". Vérifiez l'enneigement et la météo actuelle sur place.";
+          }
+        }
+      } else if (r.type === "avis" && r.id && r.id !== "ll") {
+        const name = nameFromSlug(r.seg);
+        if (name) {
+          title = "Naivo - Conditions " + name;
+          description = "Retour terrain et conditions nivologiques à " + name + ".";
+        }
+      } else if (r.type === "bera" && r.id && r.id !== "ll") {
+        const res = await fetch(
+          "https://raw.githubusercontent.com/NCSdecoopman/naivo-data/master/data/metadonnees/massifs/massifs.geojson",
+          fetchOptions
+        );
+        if (res.ok) {
+          const data = await res.json();
+          const feat = data.features.find((f) => normalizeCode((f.properties || {}).code) === normalizeCode(r.id));
+          if (feat) {
+            const name = (feat.properties || {}).massif;
+            title = "Naivo - BERA " + name;
+            description =
+              "Consultez le Bulletin d'Estimation du Risque d'Avalanche pour le massif : " +
+              name +
+              ". Risques, orientations dangereuses et manteau neigeux.";
+          }
+        }
+      }
+    } catch (e) {
+      // ignore: keep defaults
+    }
+
+    // canonical/og:url: on reste sur /r (les crawlers ignorent souvent le hash)
+    var canonicalUrl = siteUrl + "/r";
+    applySeo(title, description, ogImage, canonicalUrl);
+  })();
+</script>
