@@ -1,0 +1,72 @@
+####################################### Description courte
+
+Assistant ski de rando avec BERA, météo, webcams et prévisions sur carte interactive.
+
+####################################### Description courte SEO
+
+Naivo centralise le BERA, les observations Météo-France, les webcams, les prévisions météo et les retours de Skitour pour préparer une sortie ski de randonnée.
+
+#######################################  Description longue
+
+Naivo est un assistant web pour préparer une sortie en ski de randonnée. Le site centralise, sur une carte interactive et via une recherche par lieu, les informations clés avant de partir : BERA et observations de stations Météo-France (température, vent et hauteur de neige au pas de temps horaire), webcams pour vérifier visuellement les conditions, prévisions météo (météogrammes 5 jours) et retours terrain issus de Skitour. L’objectif est de fournir une vue claire, cohérente et rapide à consulter, tout en conservant la traçabilité de chaque source et en respectant les conditions d’utilisation des services. Naivo ne remplace pas l’analyse personnelle ni la décision sur le terrain : la montagne comporte des risques, l’utilisateur reste responsable de sa sortie.
+
+####################################### Bio
+
+Assistant de ski de rando : BERA, relevés météo, webcams, prévisions et retours Skitour
+
+####################################### Hashtags
+
+#skiderandonnee #skirando #ski #BERA #meteomontagne #meteo #nivologie #neige #webcams #alpes
+
+####################################### Publication
+
+Pour celles et ceux qui passent du temps à croiser météo, BERA, webcams et retours terrain avant une sortie ski de rando, voici un outil pensé pour simplifier la préparation 👇
+🗺️ naivo.fr centralise sur une carte unique des informations essentielles :
+• le risque avalanche officiel (BERA – Météo-France)
+• les stations météo avec relevés horaires (neige, température, vent)
+• les webcams
+• les conditions et sorties Skitour
+• les prévisions météo détaillées (météogrammes)
+
+🎯 L’objectif : gagner du temps, améliorer la lecture globale des conditions et aider à la prise de décision avant le départ, en rendant les données plus accessibles et cohérentes spatialement.
+C’est un outil complémentaire, conçu pour structurer l’information et limiter la dispersion des sources.
+👉 Accessible gratuitement sur https://naivo.fr
+📘 Facebook : https://www.facebook.com/naivo.fr
+📸 Instagram : https://www.instagram.com/naivo.fr
+
+####################################### CAF
+
+Bonjour,
+
+Je me permets de vous contacter pour vous présenter naivo (https://naivo.fr
+), un outil numérique gratuit dédié à l’aide à la préparation des sorties de ski de randonnée.
+
+naivo a été conçu pour faciliter la lecture globale des conditions en montagne en centralisant sur une carte unique les informations clés utilisées par les pratiquants :
+
+- BERA de Météo-France
+- observations stations météo horaires (vent, température, enneigement)
+- webcams
+- retours et conditions issues de Skitour
+- prévisions météorologiques (meteogrammes 5 jours)
+
+L’objectif n’est en aucun cas de se substituer à l’analyse terrain ou à la formation, mais de faire gagner du temps en amont et d’aider à croiser rapidement les sources officielles et communautaires, dans une logique de prévention et de prise de décision éclairée.
+
+Dans cet esprit, je souhaitais savoir s’il vous serait possible de relayer ou partager Naivo auprès de votre communauté (site, réseaux sociaux, newsletter), comme un outil complémentaire aux ressources existantes de la FFCAM pour la préparation des sorties en montagne.
+
+Le projet est indépendant, non commercial, et pensé avant tout comme un service à la communauté des pratiquants.
+
+Je reste bien entendu à votre disposition pour toute information complémentaire.
+Bien cordialement,
+Nicolas Decoopman
+Développeur de naivo.
+
+Site : https://naivo.fr
+Facebook : https://www.facebook.com/naivo.fr/
+Instagram : https://www.instagram.com/naivo.fr/
+
+## RESEAU
+
+Bonjour,
+je développe naivo (https://naivo.fr), un outil gratuit qui centralise BERA, météo, webcams et retours terrain pour préparer les sorties ski de rando. Si vous avez 2 minutes pour y jeter un œil, un retour franc (même critique) m’aiderait beaucoup. Si le projet vous semble utile, un partage serait super pour la communauté 👍
+Merci,
+Bonne glisse !

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="744"
+  height="255"
+  viewBox="0 0 744 255">
+
+  <!-- Fond -->
+  <rect x="0" y="0" width="744" height="255" rx="80" fill="#100f0d"/>
+
+  <!-- Bordure -->
+  <rect x="6" y="6" width="732" height="243" rx="70"
+        fill="none" stroke="#a2a2a1" stroke-width="8"/>
+
+  <!-- Icône ampoule -->
+  <g transform="translate(105,36)">
+    <path
+      fill="#ffffff"
+      d="
+        M70 0
+        C34 0 6 28 6 66
+        C6 98 24 116 34 130
+        C42 141 46 150 46 158
+        C46 170 54 178 66 180
+        H74
+        C86 178 94 170 94 158
+        C94 150 98 141 106 130
+        C116 116 134 98 134 66
+        C134 28 106 0 70 0
+        Z
+      "/>
+  </g>
+
+  <!-- Texte -->
+  <text x="325" y="150"
+        font-family="Google Sans, Product Sans, Arial, sans-serif"
+        font-size="80"
+        fill="#ffffff"
+        font-weight="600">
+    Tutoriel
+  </text>
+
+</svg>

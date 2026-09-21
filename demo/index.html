@@ -1,0 +1,796 @@
+<!DOCTYPE html><html lang="fr" data-astro-cid-prwxh6m4> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>naivo.fr - Démo</title><meta name="description" content="Présentation interactive de naivo.fr pour les salons et événements."><!-- Favicons --><link rel="icon" type="image/svg+xml" href="/logo/flocon-dark.svg"><link rel="stylesheet" href="/assets/index.BzpJaXr_.css">
+<link rel="stylesheet" href="/assets/demo.CZanCxA5.css"></head> <body data-astro-cid-prwxh6m4> <!-- Demo Navigation Tabs --> <div class="demo-tabs-container" id="demo-tabs-container" data-astro-cid-prwxh6m4> <button type="button" class="demo-tab active" data-tab="kiosk" onclick="window.switchDemoTab && window.switchDemoTab('kiosk')" data-astro-cid-prwxh6m4> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-icon" data-astro-cid-prwxh6m4> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" data-astro-cid-prwxh6m4></path> </svg>
+Présentation
+</button> <button type="button" class="demo-tab" data-tab="map" onclick="window.switchDemoTab && window.switchDemoTab('map')" data-astro-cid-prwxh6m4> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="tab-icon" data-astro-cid-prwxh6m4> <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.446 1.202-.832a2.25 2.25 0 0 0 .896-1.585V1.913a.75.75 0 0 0-1.07-.665l-3.9 1.95a2.25 2.25 0 0 1-2.006 0l-3.9-1.95a.75.75 0 0 0-1.07.665V16.4a2.25 2.25 0 0 0 .895 1.584l1.204.833a2.25 2.25 0 0 0 2.503.003l1.202-.83a2.25 2.25 0 0 1 2.503-.003l1.202.83a2.25 2.25 0 0 0 2.503-.003Z" data-astro-cid-prwxh6m4></path> </svg>
+Carte Plein Écran (1920x1080)
+</button> </div> <!-- Static Background --> <div class="background-container" id="demo-bg" data-astro-cid-prwxh6m4></div> <!-- Dashboard Content --> <div class="dashboard-container" id="demo-dashboard" data-astro-cid-prwxh6m4> <div class="grid-layout" data-astro-cid-prwxh6m4> <!-- Left Card: Branding and QR --> <div class="kiosk-card" data-astro-cid-prwxh6m4> <div class="logo-area" data-astro-cid-prwxh6m4> <img src="/logo/flocon-white.svg" alt="" class="logo-flocon" data-astro-cid-prwxh6m4> <img src="/logo/naivo-text-white.svg" alt="Naivo" class="logo-text" data-astro-cid-prwxh6m4> </div> <p class="tagline" data-astro-cid-prwxh6m4>
+Tout au même endroit. L'outil cartographique indispensable pour planifier vos sorties de montagne en toute sécurité.
+</p> <!-- QR Code scanning --> <div class="qr-showcase" data-astro-cid-prwxh6m4> <div class="qr-wrapper" data-astro-cid-prwxh6m4> <img src="/salon/qrcode.png" alt="Scanner QR Code" class="qr-img" data-astro-cid-prwxh6m4> </div> <div class="qr-text" data-astro-cid-prwxh6m4> <h3 class="qr-title" data-astro-cid-prwxh6m4>Essayez naivo maintenant</h3> <p class="qr-desc" data-astro-cid-prwxh6m4>Flashez ce code avec votre appareil photo pour ouvrir l'application mobile et préparer votre prochaine course.</p> </div> </div> <!-- Features loop --> <div class="features-list" data-astro-cid-prwxh6m4> <div class="feature-item active" data-index="0" data-astro-cid-prwxh6m4> <div class="feature-icon" data-astro-cid-prwxh6m4>🏔️</div> <div class="feature-content" data-astro-cid-prwxh6m4> <h4 class="feature-name" data-astro-cid-prwxh6m4>BERA en direct</h4> <p class="feature-description" data-astro-cid-prwxh6m4>Suivez le Risque Avalanche officiel (Météo-France) détaillé par massif.</p> </div> </div> <div class="feature-item" data-index="1" data-astro-cid-prwxh6m4> <div class="feature-icon" data-astro-cid-prwxh6m4>❄️</div> <div class="feature-content" data-astro-cid-prwxh6m4> <h4 class="feature-name" data-astro-cid-prwxh6m4>Relevés de neige</h4> <p class="feature-description" data-astro-cid-prwxh6m4>Consultez les hauteurs de neige fraîches et graphiques de vent/température.</p> </div> </div> <div class="feature-item" data-index="2" data-astro-cid-prwxh6m4> <div class="feature-icon" data-astro-cid-prwxh6m4>📷</div> <div class="feature-content" data-astro-cid-prwxh6m4> <h4 class="feature-name" data-astro-cid-prwxh6m4>Webcams</h4> <p class="feature-description" data-astro-cid-prwxh6m4>Vérifiez les conditions réelles en montagne grâce aux webcams intégrées.</p> </div> </div> <div class="feature-item" data-index="3" data-astro-cid-prwxh6m4> <div class="feature-icon" data-astro-cid-prwxh6m4>🎿</div> <div class="feature-content" data-astro-cid-prwxh6m4> <h4 class="feature-name" data-astro-cid-prwxh6m4>Retours terrain</h4> <p class="feature-description" data-astro-cid-prwxh6m4>Accédez aux dernières sorties partagées sur Skitour & Camptocamp.</p> </div> </div> <div class="feature-item" data-index="4" data-astro-cid-prwxh6m4> <div class="feature-icon" data-astro-cid-prwxh6m4>🥞</div> <div class="feature-content" data-astro-cid-prwxh6m4> <h4 class="feature-name" data-astro-cid-prwxh6m4>Calques interactifs</h4> <p class="feature-description" data-astro-cid-prwxh6m4>Superposez les pentes IGN, les courbes de niveau, l'enneigement et les traces de ski.</p> </div> </div> </div> </div> <!-- Right Area: Mobile Mockup containing Live App --> <div class="phone-showcase" data-astro-cid-prwxh6m4> <div class="phone-mockup" data-astro-cid-prwxh6m4> <iframe src="/?cgu=false&ll=45.249237,6.049685&z=12&pointer=off" class="phone-iframe" id="kiosk-iframe" title="naivo Mobile Live Application" data-astro-cid-prwxh6m4></iframe> <div id="virtual-cursor" class="virtual-cursor" data-astro-cid-prwxh6m4></div> </div> </div> </div> </div> <!-- Fullscreen Map Container --> <div class="fullscreen-wrapper" id="demo-fullscreen-wrapper" data-astro-cid-prwxh6m4> <div class="fullscreen-container" id="demo-fullscreen-container" data-astro-cid-prwxh6m4> <!-- iframe with mobile=true query param to skip the index presentation page --> <iframe src="/?cgu=false&mobile=true&ll=45.249237,6.049685&z=12&pointer=off" class="fullscreen-iframe" id="fullscreen-iframe" title="naivo Mobile Live Application Fullscreen" data-astro-cid-prwxh6m4></iframe> <div id="fullscreen-virtual-cursor" class="virtual-cursor" data-astro-cid-prwxh6m4></div> <!-- Branding Card Overlay --> <div class="fullscreen-branding-card" data-astro-cid-prwxh6m4> <div class="logo-area-fullscreen" data-astro-cid-prwxh6m4> <img src="/logo/flocon-white.svg" alt="" class="logo-flocon-fullscreen" data-astro-cid-prwxh6m4> <img src="/logo/naivo-text-white-cropped.svg" alt="Naivo" class="logo-text-fullscreen" data-astro-cid-prwxh6m4> </div> <div class="branding-divider" data-astro-cid-prwxh6m4></div> <div class="qr-showcase-fullscreen" data-astro-cid-prwxh6m4> <div class="qr-wrapper-fullscreen" data-astro-cid-prwxh6m4> <img src="/salon/qrcode.png" alt="Scanner QR Code" class="qr-img-fullscreen" data-astro-cid-prwxh6m4> </div> </div> </div> </div> </div> <!-- Kiosk scripts --> <script>
+			(function() {
+				let currentTab = 'kiosk';
+				let hideTimeout;
+
+				function resizeFullscreen() {
+					const fullscreenContainer = document.getElementById('demo-fullscreen-container');
+					if (!fullscreenContainer) return;
+					const winW = window.innerWidth;
+					const winH = window.innerHeight;
+					const scaleX = winW / 1920;
+					const scaleY = winH / 1080;
+					const scale = Math.min(scaleX, scaleY);
+					fullscreenContainer.style.transform = `scale(${scale})`;
+				}
+
+				function resetTabsVisibility() {
+					const tabsContainer = document.getElementById('demo-tabs-container');
+					if (!tabsContainer) return;
+					tabsContainer.classList.remove('tabs-hidden');
+					clearTimeout(hideTimeout);
+					
+					if (currentTab === 'map') {
+						hideTimeout = setTimeout(() => {
+							tabsContainer.classList.add('tabs-hidden');
+						}, 3000);
+					}
+				}
+
+				function switchTab(tabId, updateUrl = true) {
+					currentTab = tabId;
+					
+					const tabBtns = document.querySelectorAll('.demo-tab');
+					const dashboard = document.getElementById('demo-dashboard');
+					const fullscreenWrapper = document.getElementById('demo-fullscreen-wrapper');
+					const demoBg = document.getElementById('demo-bg');
+					
+					if (!dashboard || !fullscreenWrapper || !demoBg) {
+						console.warn("Demo UI elements not fully loaded yet for tab switch.");
+						return;
+					}
+
+					// Update buttons
+					tabBtns.forEach(btn => {
+						if (btn.getAttribute('data-tab') === tabId) {
+							btn.classList.add('active');
+						} else {
+							btn.classList.remove('active');
+						}
+					});
+
+					// Toggle views
+					if (tabId === 'map') {
+						dashboard.classList.add('hidden');
+						fullscreenWrapper.classList.add('active');
+						demoBg.style.display = 'none';
+						resizeFullscreen();
+						
+						const fsIframe = document.getElementById('fullscreen-iframe');
+						if (fsIframe && !fsIframe.src) {
+							fsIframe.src = "/?cgu=false&mobile=true&ll=45.249237,6.049685&z=12&pointer=off";
+						}
+					} else {
+						dashboard.classList.remove('hidden');
+						fullscreenWrapper.classList.remove('active');
+						demoBg.style.display = 'block';
+					}
+
+					// Sync to URL query param
+					if (updateUrl) {
+						const url = new URL(window.location.href);
+						url.searchParams.set('tab', tabId);
+						window.history.replaceState(null, '', url.pathname + url.search);
+					}
+
+					// Reset hide timeout
+					resetTabsVisibility();
+				}
+
+				// Expose globally so inline onclick works immediately
+				window.switchDemoTab = switchTab;
+
+				// Init from URL immediately
+				const initialTab = new URLSearchParams(window.location.search).get('tab') || 'kiosk';
+				if (document.readyState !== 'loading') {
+					switchTab(initialTab, false);
+				} else {
+					document.addEventListener('DOMContentLoaded', () => switchTab(initialTab, false));
+				}
+
+				function initDemo() {
+					// Listen to button clicks (additional fallback)
+					const tabBtns = document.querySelectorAll('.demo-tab');
+					tabBtns.forEach(btn => {
+						btn.addEventListener('click', () => {
+							const tabId = btn.getAttribute('data-tab');
+							switchTab(tabId);
+						});
+					});
+
+					// Resize handler
+					window.addEventListener('resize', () => {
+						if (currentTab === 'map') {
+							resizeFullscreen();
+						}
+					});
+
+					document.addEventListener('mousemove', resetTabsVisibility);
+					document.addEventListener('touchstart', resetTabsVisibility);
+				// 1. Features Loop Helper
+				function setActiveFeature(index) {
+					const items = document.querySelectorAll('.feature-item');
+					items.forEach((item, idx) => {
+						if (idx === index) {
+							item.classList.add('active');
+						} else {
+							item.classList.remove('active');
+						}
+					});
+				}
+
+				// 2. Automated User Simulation inside Iframe
+				function getActiveIframe() {
+					return currentTab === 'map' 
+						? document.getElementById('fullscreen-iframe')
+						: document.getElementById('kiosk-iframe');
+				}
+
+				function getActiveCursor() {
+					return currentTab === 'map'
+						? document.getElementById('fullscreen-virtual-cursor')
+						: document.getElementById('virtual-cursor');
+				}
+
+				function moveCursorTo(x, y, callback) {
+					const cursor = getActiveCursor();
+					if (!cursor) return callback();
+					cursor.style.left = `${x}px`;
+					cursor.style.top = `${y}px`;
+					setTimeout(callback, 850);
+				}
+
+				function simulateClickEffect(x, y, callback) {
+					const cursor = getActiveCursor();
+					if (!cursor) return callback();
+					cursor.classList.add('clicking');
+					
+					const targetContainer = currentTab === 'map'
+						? document.getElementById('demo-fullscreen-container')
+						: document.querySelector('.phone-mockup');
+					if (targetContainer) {
+						const ripple = document.createElement('div');
+						ripple.className = 'click-ripple';
+						ripple.style.left = `${x}px`;
+						ripple.style.top = `${y}px`;
+						targetContainer.appendChild(ripple);
+						setTimeout(() => ripple.remove(), 400);
+					}
+
+					setTimeout(() => {
+						cursor.classList.remove('clicking');
+						callback();
+					}, 200);
+				}
+
+				function clickElement(el, callback) {
+					if (!el) return callback();
+					const rect = el.getBoundingClientRect();
+					const x = rect.left + rect.width / 2;
+					const y = rect.top + rect.height / 2;
+
+					moveCursorTo(x, y, () => {
+						simulateClickEffect(x, y, () => {
+							el.click();
+							callback();
+						});
+					});
+				}
+
+				function getIframeDoc() {
+					try {
+						const iframe = getActiveIframe();
+						return iframe ? (iframe.contentDocument || iframe.contentWindow.document) : null;
+					} catch (e) {
+						console.error("Cannot access iframe document:", e);
+						return null;
+					}
+				}
+
+				function getIframeWindow() {
+					try {
+						const iframe = getActiveIframe();
+						return iframe ? iframe.contentWindow : null;
+					} catch (e) {
+						console.error("Cannot access iframe window:", e);
+						return null;
+					}
+				}
+
+				function findButtonByText(doc, text) {
+					const buttons = doc.querySelectorAll('button');
+					for (const btn of buttons) {
+						if (btn.textContent && btn.textContent.toLowerCase().includes(text.toLowerCase())) {
+							return btn;
+						}
+					}
+					return null;
+				}
+
+				// Helper to queue actions sequentially
+				function runSequence(actions) {
+					let actionIndex = 0;
+					function next() {
+						if (actionIndex < actions.length) {
+							const action = actions[actionIndex++];
+							action(next);
+						}
+					}
+					next();
+				}
+
+				// Action: Smooth scroll inside the active modal (BERA, Forecast, Webcam, etc.)
+				const scrollActiveModal = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+
+					const scrollContainer = doc.querySelector('.z-\\[6000\\] .overflow-y-auto, .z-\\[5000\\] .overflow-y-auto') || doc.querySelector('.z-\\[5000\\] > div');
+					if (!scrollContainer) {
+						console.log("No scroll container found in modal");
+						return callback();
+					}
+
+					let start = null;
+					const startScroll = scrollContainer.scrollTop;
+					const targetScroll = Math.min(scrollContainer.scrollHeight - scrollContainer.clientHeight, startScroll + 600);
+
+					function animate(t) {
+						if (!start) start = t;
+						const elapsed = t - start;
+						const progress = Math.min(elapsed / 3000, 1); // 3s scroll duration
+						
+						scrollContainer.scrollTop = startScroll + (targetScroll - startScroll) * progress;
+						
+						if (progress < 1) {
+							requestAnimationFrame(animate);
+						} else {
+							// Scroll back up after a pause
+							setTimeout(() => {
+								let startUp = null;
+								const currentScroll = scrollContainer.scrollTop;
+								function animateUp(tUp) {
+									if (!startUp) startUp = tUp;
+									const elapsedUp = tUp - startUp;
+									const progressUp = Math.min(elapsedUp / 2000, 1); // 2s scroll back up
+									
+									scrollContainer.scrollTop = currentScroll * (1 - progressUp);
+									
+									if (progressUp < 1) {
+										requestAnimationFrame(animateUp);
+									} else {
+										callback();
+									}
+								}
+								requestAnimationFrame(animateUp);
+							}, 2500);
+						}
+					}
+					requestAnimationFrame(animate);
+				};
+
+				// Action: Smooth scroll horizontally inside the webcam container
+				const scrollWebcamHorizontal = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+
+					const scrollContainer = doc.querySelector('.overflow-x-auto');
+					if (!scrollContainer) {
+						console.log("No horizontal scroll container found in webcam modal");
+						return setTimeout(callback, 2500); // Just wait 2.5s anyway
+					}
+
+					let start = null;
+					const startScroll = scrollContainer.scrollLeft;
+					const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+					const targetScroll = maxScroll; // Scroll all the way to the right
+
+					if (maxScroll <= 0) {
+						console.log("Webcam image fits on screen, no need to scroll.");
+						return setTimeout(callback, 2500); // Just wait 2.5s anyway
+					}
+
+					function animate(t) {
+						if (!start) start = t;
+						const elapsed = t - start;
+						const progress = Math.min(elapsed / 5000, 1); // 5s scroll duration
+						
+						scrollContainer.scrollLeft = startScroll + (targetScroll - startScroll) * progress;
+						
+						if (progress < 1) {
+							requestAnimationFrame(animate);
+						} else {
+							// Scroll back to left after a pause
+							setTimeout(() => {
+								let startLeft = null;
+								const currentScroll = scrollContainer.scrollLeft;
+								function animateBack(tBack) {
+									if (!startLeft) startLeft = tBack;
+									const elapsedBack = tBack - startLeft;
+									const progressBack = Math.min(elapsedBack / 3000, 1); // 3s scroll back
+									
+									scrollContainer.scrollLeft = currentScroll * (1 - progressBack);
+									
+									if (progressBack < 1) {
+										requestAnimationFrame(animateBack);
+									} else {
+										callback();
+									}
+								}
+								requestAnimationFrame(animateBack);
+							}, 2000);
+						}
+					}
+					requestAnimationFrame(animate);
+				};
+
+				// Action: Close active modal
+				const closeActiveModalAction = (callback) => {
+					const doc = getIframeDoc();
+					if (doc) {
+						const closeBtn = doc.querySelector('.z-\\[6000\\] button, .z-\\[5000\\] button');
+						if (closeBtn) {
+							console.log("Clicking DOM close button");
+							clickElement(closeBtn, () => {
+								const win = getIframeWindow();
+								if (win && typeof win.kioskCloseAllModals === 'function') {
+									win.kioskCloseAllModals();
+								}
+								setTimeout(callback, 1500);
+							});
+							return;
+						}
+					}
+					const win = getIframeWindow();
+					if (win && typeof win.kioskCloseAllModals === 'function') {
+						win.kioskCloseAllModals();
+					}
+					setTimeout(callback, 1500);
+				};
+
+				// Action: Zoom map programmatically
+				const zoomMapAction = (zoomLevel, duration = 2000) => (callback) => {
+					const win = getIframeWindow();
+					if (win && typeof win.kioskSetZoom === 'function') {
+						console.log("Zooming map via React state to " + zoomLevel);
+						win.kioskSetZoom(zoomLevel, duration);
+						setTimeout(callback, duration + 500);
+					} else if (win && win.kioskMap) {
+						console.log("Zooming map via MapLibre fallback to " + zoomLevel);
+						win.kioskMap.flyTo({ zoom: zoomLevel, duration: duration });
+						setTimeout(callback, duration + 500);
+					} else {
+						callback();
+					}
+				};
+
+				// Action: Toggle Hamburger menu
+				const toggleMenuAction = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+					const menuBtn = doc.querySelector('button[aria-label*="menu"]') || doc.querySelector('button[aria-label*="Menu"]');
+					if (menuBtn) {
+						console.log("Clicking Menu button");
+						clickElement(menuBtn, callback);
+					} else {
+						callback();
+					}
+				};
+
+				// Action: Click BERA button in the menu
+				const clickBeraAction = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+					const beraBtn = findButtonByText(doc, "BERA");
+					if (beraBtn) {
+						console.log("Opening BERA");
+						clickElement(beraBtn, () => {
+							setTimeout(callback, 2000); // Wait for BERA load
+						});
+					} else {
+						console.log("BERA button not found in menu");
+						callback();
+					}
+				};
+
+				// Action: Click Forecast button in the menu
+				const clickForecastAction = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+					const forecastBtn = findButtonByText(doc, "PRÉVISIONS") || findButtonByText(doc, "prévisions") || findButtonByText(doc, "prevision");
+					if (forecastBtn) {
+						console.log("Opening Forecast");
+						clickElement(forecastBtn, () => {
+							setTimeout(callback, 2000);
+						});
+					} else {
+						console.log("Forecast button not found in menu");
+						callback();
+					}
+				};
+
+				// Action: Toggle layers switcher popup
+				const toggleLayersMenuAction = (callback) => {
+					const doc = getIframeDoc();
+					if (!doc) return callback();
+					const layersBtn = doc.querySelector('button[aria-label*="Calques"]') || doc.querySelector('button[aria-label*="calques"]') || doc.querySelector('button[aria-label*="carte"]');
+					if (layersBtn) {
+						console.log("Toggling layers switcher");
+						clickElement(layersBtn, callback);
+					} else {
+						callback();
+					}
+				};
+
+				// Action: Toggle a layer option in the switcher popup
+				const clickLayerOptionAction = (name) => (callback) => {
+					let retries = 0;
+					const maxRetries = 15;
+
+					function tryClick() {
+						const doc = getIframeDoc();
+						if (!doc) {
+							scheduleNext();
+							return;
+						}
+						const buttons = doc.querySelectorAll('.z-\\[4090\\] button');
+						let found = false;
+						for (const btn of buttons) {
+							if (btn.textContent && btn.textContent.toLowerCase().includes(name.toLowerCase())) {
+								console.log(`Toggling layer: ${name}`);
+								found = true;
+								clickElement(btn, callback);
+								break;
+							}
+						}
+						if (!found) {
+							scheduleNext();
+						}
+					}
+
+					function scheduleNext() {
+						retries++;
+						if (retries < maxRetries) {
+							setTimeout(tryClick, 100);
+						} else {
+							console.warn(`Layer not found: ${name}`);
+							callback();
+						}
+					}
+
+					tryClick();
+				};
+
+				// Action: Toggle a filter pill in the menu panel
+				const toggleFilterInMenuAction = (name) => (callback) => {
+					let retries = 0;
+					const maxRetries = 15;
+
+					function tryClick() {
+						const doc = getIframeDoc();
+						if (!doc) {
+							scheduleNext();
+							return;
+						}
+						const buttons = doc.querySelectorAll('.z-\\[4100\\] button');
+						let found = false;
+						for (const btn of buttons) {
+							if (btn.textContent && btn.textContent.toLowerCase().includes(name.toLowerCase())) {
+								console.log(`Toggling menu filter: ${name}`);
+								found = true;
+								clickElement(btn, callback);
+								break;
+							}
+						}
+						if (!found) {
+							scheduleNext();
+						}
+					}
+
+					function scheduleNext() {
+						retries++;
+						if (retries < maxRetries) {
+							setTimeout(tryClick, 100);
+						} else {
+							console.warn(`Menu filter not found: ${name}`);
+							callback();
+						}
+					}
+
+					tryClick();
+				};
+
+				// Action: Click a marker of a specific type (webcam, station, avis) using projected coordinates or programmatic setters
+				const clickKioskMarkerAction = (markerType) => (callback) => {
+					const win = getIframeWindow();
+					const doc = getIframeDoc();
+					if (!win || !doc || !win.kioskData || !win.kioskMap) {
+						console.log(`Kiosk data/map not available yet for: ${markerType}`);
+						return callback();
+					}
+
+					const data = win.kioskData;
+					let list = [];
+					if (markerType === 'webcam') {
+						list = data.webcams || [];
+					} else if (markerType === 'station') {
+						list = data.stations || [];
+					} else if (markerType === 'avis') {
+						list = data.conditions || [];
+					}
+
+					let bounds;
+					try {
+						bounds = win.kioskMap.getBounds();
+					} catch(e) {
+						console.error("Error getting map bounds:", e);
+					}
+
+					let validMarkers = list.filter(item => {
+						if (typeof item.lat !== 'number' || typeof item.lon !== 'number') return false;
+						if (bounds) {
+							try {
+								return bounds.contains([item.lon, item.lat]);
+							} catch(e) {
+								return true;
+							}
+						}
+						return true;
+					});
+
+					// Fallback if no markers are in current map viewport bounds
+					if (validMarkers.length === 0) {
+						console.log(`No valid markers in bounds for ${markerType}, falling back to total list (size: ${list.length})`);
+						validMarkers = list.filter(item => typeof item.lat === 'number' && typeof item.lon === 'number');
+					}
+
+					if (validMarkers.length === 0) {
+						console.log(`No markers of type ${markerType} found at all.`);
+						return callback();
+					}
+
+					const proceedWithMarker = (marker) => {
+						const lon = marker.lon;
+						const lat = marker.lat;
+
+						try {
+							const projected = win.kioskMap.project([lon, lat]);
+							const x = projected ? projected.x : null;
+							const y = projected ? projected.y : null;
+
+							const doMarkerActivation = () => {
+								let setterCalled = false;
+								if (markerType === 'webcam' && typeof win.kioskSetSelectedWebcam === 'function') {
+									console.log(`Programmatically opening webcam: "${marker.name || 'unnamed'}"`);
+									win.kioskSetSelectedWebcam(marker);
+									setterCalled = true;
+								} else if (markerType === 'station' && typeof win.kioskSetSelectedStation === 'function') {
+									console.log(`Programmatically opening station: "${marker.name || 'unnamed'}"`);
+									win.kioskSetSelectedStation(marker);
+									setterCalled = true;
+								} else if (markerType === 'avis' && typeof win.kioskSetSelectedCondition === 'function') {
+									console.log(`Programmatically opening avis: "${marker.name || 'unnamed'}"`);
+									win.kioskSetSelectedCondition(marker);
+									setterCalled = true;
+								}
+
+								if (setterCalled) {
+									setTimeout(callback, 3000);
+								} else {
+									const canvas = doc.querySelector('canvas');
+									if (canvas && typeof x === 'number' && typeof y === 'number') {
+										const rect = canvas.getBoundingClientRect();
+										const clientX = rect.left + x;
+										const clientY = rect.top + y;
+										canvas.dispatchEvent(new MouseEvent('mousedown', { clientX, clientY, bubbles: true }));
+										canvas.dispatchEvent(new MouseEvent('mouseup', { clientX, clientY, bubbles: true }));
+										canvas.dispatchEvent(new MouseEvent('click', { clientX, clientY, bubbles: true }));
+									}
+									setTimeout(callback, 3000);
+								}
+							};
+
+							if (typeof x === 'number' && typeof y === 'number') {
+								moveCursorTo(x, y, () => {
+									simulateClickEffect(x, y, doMarkerActivation);
+								});
+							} else {
+								doMarkerActivation();
+							}
+						} catch (err) {
+							console.error("Error activating marker:", err);
+							callback();
+						}
+					};
+
+					if (markerType === 'webcam') {
+						const specificCam = list.find(item => 
+							item.name && 
+							(item.name.toLowerCase().includes("bouquetins") || 
+							 item.name.toLowerCase().includes("les 7 laux - sommet des bouquetins (prapoutel)"))
+						);
+						if (specificCam) {
+							console.log(`Found specific target webcam: "${specificCam.name}"`);
+							proceedWithMarker(specificCam);
+						} else {
+							const marker = validMarkers[Math.floor(Math.random() * validMarkers.length)];
+							proceedWithMarker(marker);
+						}
+					} else {
+						const marker = validMarkers[Math.floor(Math.random() * validMarkers.length)];
+						proceedWithMarker(marker);
+					}
+				};
+
+				function executeKioskScenario() {
+					console.log("Executing Kiosk Scenario steps...");
+					runSequence([
+						// 1. Click/open webcam marker, scroll horizontally, and close it
+						(next) => { setActiveFeature(2); next(); },
+						clickKioskMarkerAction('webcam'),
+						scrollWebcamHorizontal,
+						closeActiveModalAction,
+
+						// 2. Click/open weather station marker, scroll charts, and close it
+						(next) => { setActiveFeature(1); next(); },
+						clickKioskMarkerAction('station'),
+						scrollActiveModal,
+						closeActiveModalAction,
+
+						// 3. Click/open review (avis) marker, scroll it, and close it
+						(next) => { setActiveFeature(3); next(); },
+						clickKioskMarkerAction('avis'),
+						scrollActiveModal,
+						closeActiveModalAction,
+
+						// 4. Toggle layers scenario
+						// - Afficher enneigement + traces de ski
+						(next) => { setActiveFeature(4); next(); },
+						toggleLayersMenuAction,
+						clickLayerOptionAction("Enneigement"),
+						clickLayerOptionAction("Traces de ski"),
+						toggleLayersMenuAction, // close switcher
+						zoomMapAction(15.5, 2500), // Zoomer
+						(next) => setTimeout(next, 3000), // Observe map with enneigement + traces
+
+						// - Desactiver enneigement + traces et activer (sans refermer le menu) courbes de niveaux et pentes
+						(next) => { setActiveFeature(4); next(); },
+						toggleLayersMenuAction,
+						clickLayerOptionAction("Enneigement"),
+						clickLayerOptionAction("Traces de ski"),
+						clickLayerOptionAction("Courbes de niveaux"),
+						clickLayerOptionAction("Pentes"),
+						toggleLayersMenuAction, // close switcher
+						(next) => setTimeout(next, 3000), // Observe map with contours + slopes
+
+						// - Activer le fond de carte Topographie IGN (Topo)
+						(next) => { setActiveFeature(4); next(); },
+						toggleLayersMenuAction,
+						clickLayerOptionAction("Topographie IGN"),
+						toggleLayersMenuAction, // close switcher
+						(next) => setTimeout(next, 3000), // Observe map with Topo base layer
+
+						// - Rétablir le fond de carte de base naivo et désactiver courbes + pentes
+						(next) => { setActiveFeature(4); next(); },
+						toggleLayersMenuAction,
+						clickLayerOptionAction("Carte naivo"),
+						clickLayerOptionAction("Courbes de niveaux"),
+						clickLayerOptionAction("Pentes"),
+						toggleLayersMenuAction, // close switcher
+						zoomMapAction(12, 2000), // Zoom out back to normal
+
+						// 5. Open menu & BERA
+						(next) => { setActiveFeature(0); next(); },
+						toggleMenuAction,
+						clickBeraAction,
+						scrollActiveModal, // Scroll the BERA details page
+						closeActiveModalAction, // Close the BERA details
+
+						// 6. Open Forecast
+						(next) => { setActiveFeature(1); next(); },
+						clickForecastAction,
+						scrollActiveModal, // Scroll the Forecast details page
+						closeActiveModalAction, // Close the Forecast details
+
+						// 7. Toggle filters inside the menu (Stations, Retours terrain, Webcams)
+						(next) => { setActiveFeature(1); next(); },
+						toggleFilterInMenuAction("Stations"),       // Hide stations
+						toggleMenuAction, // close menu to see map with hidden markers
+						(next) => setTimeout(next, 3000), // observe empty map
+						toggleMenuAction, // re-open menu
+						toggleFilterInMenuAction("Stations"),       // Re-show stations
+
+						(next) => { setActiveFeature(3); next(); },
+						toggleFilterInMenuAction("Retours terrain"), // Hide reviews
+						toggleMenuAction, // close menu to see map with hidden markers
+						(next) => setTimeout(next, 3000), // observe empty map
+						toggleMenuAction, // re-open menu
+						toggleFilterInMenuAction("Retours terrain"), // Re-show reviews
+
+						(next) => { setActiveFeature(2); next(); },
+						toggleFilterInMenuAction("Webcams"),         // Hide webcams
+						toggleMenuAction, // close menu to see map with hidden markers
+						(next) => setTimeout(next, 3000), // observe empty map
+						toggleMenuAction, // re-open menu
+						toggleFilterInMenuAction("Webcams"),         // Re-show webcams
+						toggleMenuAction, // close menu
+
+						// 8. Loop again
+						(next) => {
+							console.log("Finished kiosk sequence round. Next round in 4 seconds.");
+							setTimeout(executeKioskScenario, 4000);
+						}
+					]);
+				}
+
+				let kioskInitialized = false;
+				let pollStartTime = Date.now();
+
+				function initKioskPolling() {
+					if (kioskInitialized) return;
+
+					const win = getIframeWindow();
+					const elapsed = Date.now() - pollStartTime;
+
+					if (win && win.kioskMap && win.kioskData) {
+						const hasData = (win.kioskData.webcams && win.kioskData.webcams.length > 0) ||
+						                (win.kioskData.stations && win.kioskData.stations.length > 0) ||
+						                (win.kioskData.conditions && win.kioskData.conditions.length > 0);
+						
+						const hasSetters = typeof win.kioskSetSelectedWebcam === 'function' &&
+						                   typeof win.kioskSetSelectedStation === 'function' &&
+						                   typeof win.kioskSetSelectedCondition === 'function';
+
+						const timeoutReached = elapsed > 6000; // 6 seconds safeguard
+
+						if ((hasData && hasSetters) || timeoutReached) {
+							kioskInitialized = true;
+							if (hasData && hasSetters) {
+								console.log("Kiosk map, marker data, and React setters are fully loaded! Starting scenario loop in 3s...");
+							} else {
+								console.log("Kiosk map loaded, but marker data/setters are not available. Starting scenario loop anyway as fallback...");
+							}
+							
+							setTimeout(executeKioskScenario, 3000);
+							return;
+						}
+					}
+					
+					console.log(`Polling kiosk map/data (${Math.round(elapsed / 1000)}s elapsed)...`);
+					// Retry polling in 500ms
+					setTimeout(initKioskPolling, 500);
+				}
+
+				console.log("Setting up kiosk polling...");
+				initKioskPolling();
+
+				const kioskIframe = document.getElementById('kiosk-iframe');
+				const fullscreenIframe = document.getElementById('fullscreen-iframe');
+
+				if (kioskIframe) {
+					kioskIframe.addEventListener('load', () => {
+						console.log("Kiosk iframe loaded. Triggering kiosk check...");
+						initKioskPolling();
+					});
+				}
+				if (fullscreenIframe) {
+					fullscreenIframe.addEventListener('load', () => {
+						console.log("Fullscreen iframe loaded. Triggering kiosk check...");
+						initKioskPolling();
+					});
+				}
+			}
+
+			if (document.readyState === 'loading') {
+				document.addEventListener('DOMContentLoaded', initDemo);
+			} else {
+				initDemo();
+			}
+		})();
+		</script> </body> </html>

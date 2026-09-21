@@ -1,0 +1,9 @@
+<svg width="256" height="88" viewBox="0 0 256 88" xmlns="http://www.w3.org/2000/svg">
+  <!-- Texte naivo rapproché -->
+  <text x="128" y="56"
+        font-family="Inter, system-ui, sans-serif"
+        font-size="42"
+        font-weight="800"
+        text-anchor="middle"
+        fill="#000000">naivo</text>
+</svg>

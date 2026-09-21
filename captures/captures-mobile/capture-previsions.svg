@@ -1,0 +1,196 @@
+<svg width="430" height="760" viewBox="0 0 430 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgMobilePrev" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#050712"/>
+      <stop offset="1" stop-color="#101522"/>
+    </linearGradient>
+
+    <!-- Mobile temp background (positive/negative feel) -->
+    <linearGradient id="tempGradMobile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7f3d0"/>
+      <stop offset="0.55" stop-color="#a7f3d0"/>
+      <stop offset="0.55" stop-color="#dbeafe"/>
+      <stop offset="1" stop-color="#dbeafe"/>
+    </linearGradient>
+
+    <linearGradient id="precipBarMobile" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <!-- Subtle shadow like desktop -->
+    <filter id="modalShadowMobile" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <!-- Icon strokes -->
+    <style>
+      .txt { font-family: Inter, system-ui, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- Backdrop -->
+  <rect width="430" height="760" fill="url(#bgMobilePrev)"/>
+  <rect x="0" y="0" width="430" height="760" fill="#020617" opacity="0.7"/>
+
+  <!-- Modal -->
+  <rect x="0" y="0" width="430" height="760" rx="12" fill="#111827" stroke="#1f2937" filter="url(#modalShadowMobile)"/>
+
+  <!-- Header -->
+  <text x="26" y="88" class="txt" font-size="32" fill="#ffffff" font-weight="600">Météogramme</text>
+  <text x="26" y="118" class="txt" font-size="16" fill="#9ca3c4">Vallée Blanche · 12 – 15 déc. 2025</text>
+  <text x="392" y="68" font-family="system-ui" font-size="26" fill="#9ca3c4">×</text>
+
+  <!-- Panel -->
+  <g transform="translate(20, 140)">
+    <rect x="0" y="0" width="390" height="520" rx="12" fill="#0e111b" stroke="#1f2937"/>
+
+    <!-- Temperature zone -->
+    <rect x="16" y="18" width="358" height="220" rx="10" fill="url(#tempGradMobile)"/>
+
+    <!-- Day / night shading (like desktop: alternating light) -->
+    <g opacity="0.28">
+      <rect x="16"  y="18" width="89.5" height="220" fill="#ecfccb"/>
+      <rect x="195" y="18" width="89.5" height="220" fill="#ecfccb"/>
+    </g>
+
+    <!-- Grid lines (temp) -->
+    <g stroke="#1f2937" stroke-width="1">
+      <line x1="16" y1="62"  x2="374" y2="62"/>
+      <line x1="16" y1="106" x2="374" y2="106"/>
+      <line x1="16" y1="150" x2="374" y2="150"/>
+      <line x1="16" y1="194" x2="374" y2="194"/>
+    </g>
+
+    <!-- Vertical day separators across full panel -->
+    <g stroke="#1f2937" stroke-width="1">
+      <line x1="105.5" y1="18" x2="105.5" y2="492"/>
+      <line x1="195"   y1="18" x2="195"   y2="492"/>
+      <line x1="284.5" y1="18" x2="284.5" y2="492"/>
+    </g>
+
+    <!-- Day labels -->
+    <g class="txt" font-size="13" fill="#9ca3c4" font-weight="500" text-anchor="middle">
+      <text x="60.75"  y="12">ven 12/12</text>
+      <text x="150.25" y="12">sam 13/12</text>
+      <text x="239.75" y="12">dim 14/12</text>
+      <text x="329.25" y="12">lun 15/12</text>
+    </g>
+
+    <!-- Temperature curve (scaled to temp zone) -->
+    <polyline fill="none" stroke="#ef4444" stroke-width="2.4"
+      points="
+        16,170
+        46,95
+        76,140
+        105.5,182
+        135,98
+        165,138
+        195,160
+        224.5,110
+        254.5,142
+        284.5,176
+        314,120
+        344,150
+        374,156
+      "/>
+
+    <!-- Weather icons at midday points (simple, readable) -->
+    <g>
+      <!-- Day 1: sun -->
+      <g transform="translate(76,88)">
+        <circle cx="0" cy="0" r="7.5" fill="#fbbf24"/>
+        <g stroke="#fbbf24" stroke-width="1.6" stroke-linecap="round">
+          <line x1="0" y1="-14" x2="0" y2="-20"/>
+          <line x1="0" y1="14" x2="0" y2="20"/>
+          <line x1="-14" y1="0" x2="-20" y2="0"/>
+          <line x1="14" y1="0" x2="20" y2="0"/>
+          <line x1="-10" y1="-10" x2="-15" y2="-15"/>
+          <line x1="10" y1="10" x2="15" y2="15"/>
+          <line x1="-10" y1="10" x2="-15" y2="15"/>
+          <line x1="10" y1="-10" x2="15" y2="-15"/>
+        </g>
+      </g>
+
+      <!-- Day 2: partly cloudy -->
+      <g transform="translate(165,96)">
+        <circle cx="-10" cy="-10" r="6.5" fill="#fbbf24"/>
+        <g fill="#9ca3af">
+          <ellipse cx="4" cy="2" rx="15" ry="8"/>
+          <ellipse cx="-8" cy="0" rx="11" ry="6.5"/>
+          <ellipse cx="18" cy="0" rx="11" ry="6.5"/>
+        </g>
+      </g>
+
+      <!-- Day 3: cloudy -->
+      <g transform="translate(254.5,112)">
+        <g fill="#9ca3af">
+          <ellipse cx="0" cy="0" rx="15" ry="8"/>
+          <ellipse cx="-12" cy="-2" rx="11" ry="6.5"/>
+          <ellipse cx="12" cy="-2" rx="11" ry="6.5"/>
+        </g>
+      </g>
+
+      <!-- Day 4: snow -->
+      <g transform="translate(344,122)">
+        <g fill="#9ca3af">
+          <ellipse cx="0" cy="0" rx="15" ry="8"/>
+          <ellipse cx="-12" cy="-2" rx="11" ry="6.5"/>
+          <ellipse cx="12" cy="-2" rx="11" ry="6.5"/>
+        </g>
+        <g stroke="#94a3b8" stroke-width="1.4" stroke-linecap="round" transform="translate(0,18)">
+          <line x1="0" y1="-8" x2="0" y2="8"/>
+          <line x1="-6" y1="-4" x2="6" y2="4"/>
+          <line x1="-6" y1="4" x2="6" y2="-4"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- Precipitation zone -->
+    <rect x="16" y="270" width="358" height="160" rx="10" fill="#0b1220" stroke="#1f2937"/>
+
+    <!-- Day/night shading in precip -->
+    <g opacity="0.18">
+      <rect x="16"  y="270" width="89.5" height="160" fill="#ecfccb"/>
+      <rect x="195" y="270" width="89.5" height="160" fill="#ecfccb"/>
+    </g>
+
+    <!-- Precip grid -->
+    <g stroke="#1f2937" stroke-width="1">
+      <line x1="16" y1="325" x2="374" y2="325"/>
+      <line x1="16" y1="380" x2="374" y2="380"/>
+    </g>
+
+    <!-- Precip bars (densified like desktop; 16 bars) -->
+    <!-- Bar area: x 22..368, baseline 418 -->
+    <g fill="url(#precipBarMobile)">
+      <rect x="22"  y="396" width="14" height="22" rx="3"/>
+      <rect x="44"  y="386" width="14" height="32" rx="3"/>
+      <rect x="66"  y="392" width="14" height="26" rx="3"/>
+      <rect x="88"  y="404" width="14" height="14" rx="3"/>
+
+      <rect x="110" y="400" width="14" height="18" rx="3"/>
+      <rect x="132" y="384" width="14" height="34" rx="3"/>
+      <rect x="154" y="396" width="14" height="22" rx="3"/>
+      <rect x="176" y="390" width="14" height="28" rx="3"/>
+
+      <rect x="198" y="408" width="14" height="10" rx="3"/>
+      <rect x="220" y="400" width="14" height="18" rx="3"/>
+      <rect x="242" y="392" width="14" height="26" rx="3"/>
+      <rect x="264" y="410" width="14" height="8"  rx="3"/>
+
+      <rect x="286" y="398" width="14" height="20" rx="3"/>
+      <rect x="308" y="384" width="14" height="34" rx="3"/>
+      <rect x="330" y="392" width="14" height="26" rx="3"/>
+      <rect x="352" y="404" width="14" height="14" rx="3"/>
+    </g>
+
+    <!-- X labels (bottom) -->
+    <g class="txt" font-size="12.5" fill="#9ca3c4" text-anchor="middle">
+      <text x="60.75"  y="512">Jour 1</text>
+      <text x="150.25" y="512">Jour 2</text>
+      <text x="239.75" y="512">Jour 3</text>
+      <text x="329.25" y="512">Jour 4</text>
+    </g>
+  </g>
+</svg>
